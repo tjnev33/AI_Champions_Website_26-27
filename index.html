@@ -916,7 +916,7 @@ var DATES = [
   { mon:"NOV", day:"19", wd:"Thursday", d:"November 19", what:"K–6 information session", note:"West Woods, 4:00–4:30", start:"2026-11-19", end:"2026-11-19" },
   { mon:"NOV", day:"30", wd:"Week of", d:"Week of November 30", what:"Core missions begin", note:"Each one opens when you finish the one before", tag:"Missions 1–6", start:"2026-11-30", end:"2026-12-04" },
   { mon:"FEB", day:"1", wd:"Monday", d:"February 1", what:"Electives open", note:"Choose three that fit your job", tag:"Missions 7–9", start:"2027-02-01", end:"2027-02-01" },
-  { mon:"APR", day:"2", wd:"Friday", d:"April 2", what:"All missions due", note:"Including your share with colleagues, plus a short survey", tag:"Mission 10", start:"2027-04-02", end:"2027-04-02" }
+  { mon:"APR", day:"30", wd:"Friday", d:"April 30", what:"All missions due", note:"Including your share with colleagues, plus a short survey", tag:"Mission 10", start:"2027-04-30", end:"2027-04-30" }
 ];
 
 var MISSIONS = [
@@ -1054,7 +1054,7 @@ var FAQ = [
   ["What is an AI Champion?", "An FPS educator who leads by example, exploring how AI can enrich teaching and learning in line with the FPS Framework for Teaching and Learning and the FPS AI Use Guide. Champions are learners leading learners: they model curiosity and help colleagues use AI thoughtfully and responsibly. The What's an AI Champion? page has more."],
   ["Who can be an AI Champion?", "Any FPS staff member, in a school or at central office: classroom teachers, specialists and interventionists, special education staff, counselors and social workers, library media specialists, coaches, paras and administrators. A new cohort starts each fall. Interested in a future cohort? Let TJ or Andy know."],
   ["I'm not a classroom teacher. Will the missions fit my work?", "Yes. Everyone does the same missions using their own work. Your Mission 1 profile tells Gemini about your role, so the guided prompts start from your work. Mission 3 works for anything you'll teach, lead or present. Mission 4 works with data from your job, like attendance, survey results or library circulation. In Mission 6 you can build something for staff or families, or build one with a teacher for their class. Electives let you go deeper on what fits your role. If you lead staff, you'll also see what this PD is like for them."],
-  ["How much time does it take?", "Most missions take under an hour. They run from November 30 to April 2, 2027, and the work can count toward your EEPD goals."],
+  ["How much time does it take?", "Most missions take under an hour. They run from November 30 to April 30, 2027, and the work can count toward your EEPD goals."],
   ["Do I need a paid AI account?", "No. Everything uses the Gemini app and Gemini Notebook in your fpsct.org account."],
   ["What's the Guide Me prompt?", "A prompt you paste into Gemini that walks you through the mission one step at a time. You can use it or follow the steps in HQ yourself, whichever you prefer."],
   ["Why do I have to check the AI's work?", "AI can sound confident and still be wrong. Each mission includes a short test, like checking claims against the actual numbers, so you only use what holds up. It's the most important habit in the program."],
@@ -1109,7 +1109,7 @@ function buildJoin(){
   var upcoming = DATES.filter(function(x){ return today <= day(x.end,true); });
   if (started){
     document.getElementById("join-head").textContent="Cohort 2 is underway";
-    document.getElementById("join-text").textContent="Missions run through April 2, 2027. Interested in a future cohort? Let TJ or Andy know.";
+    document.getElementById("join-text").textContent="Missions run through April 30, 2027. Interested in a future cohort? Let TJ or Andy know.";
     upcoming = upcoming.slice(0,1);
   } else {
     upcoming = upcoming.filter(function(x){ return day(x.start) < day(COHORT_START); });
